@@ -13,3 +13,4 @@ repo init --depth=1 -u git://github.com/RedWolfRecovery/rw_manifest.git -b rw
 repo sync  -f --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
 # Clone device tree and common tree
+git clone https://github.com/honluciano/omni_device_xiaomi_merlin.git  device/xiaomi/merlin
