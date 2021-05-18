@@ -13,7 +13,7 @@ repo init --repo init -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync  -f --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
 # Clone device tree and common tree
-git clone --https://github.com/honluciano/omni_device_xiaomi_merlin.git
+git clone --https://github.com/honluciano/omni_device_xiaomi_merlin.git device/xiami/merlin
 
 # Build recovery image
 export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_merlin-eng; make -j$(nproc --all) recoveryimage
