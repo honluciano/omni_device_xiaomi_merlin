@@ -1,0 +1,15 @@
+#!bin/bash
+
+# Go to the working directory
+mkdir ~/rw && cd ~/rw
+
+# Configure git
+git config --global user.email "jhonludev@gmail.com"
+git config --global user.name "jhonlu"
+git config --global color.ui false
+
+# Sync the source
+repo init --depth=1 -u git://github.com/RedWolfRecovery/rw_manifest.git -b rw
+repo sync  -f --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+
+# Clone device tree and common tree
